@@ -1,4 +1,2 @@
 My Task List
-feed dog [DONE]
-feed the cat [DONE]
-feed the mouse [DONE]
+Buy eggs
