@@ -8,7 +8,7 @@ def create_task_file():
         overwrite = input(f"{filepath} exists. Do you want to overwrite it? y/n: ")
         if overwrite.lower() == "y":
             with open(fullpath, 'w') as file:
-                file.write("My Task List\n")
+                file.write("My Task List")
         else:
             print("File not overwritten.")
     else:
@@ -33,7 +33,7 @@ def add_new_task():
     print("Enter a new task: ")
     task = input()
     with open(fullpath, 'a') as file:
-        file.write(task)
+        file.write("\n" + task)
     print('\nTask added successfully')
     return
 
