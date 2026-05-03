@@ -39,27 +39,31 @@ def add_new_task():
 
 def delete_task():
     view_all_tasks()
-    task_number = int(input("Enter the task number to delete: "))
+    task = int(input("Enter the task number to delete: "))
     with open(fullpath, 'r') as file:
         lines = file.readlines()
-        lines.pop(task_number)
+    if task < 1 or task >= len(lines):
+        print("Index chosen out of range")
+        return
+    lines.pop(task)
     with open(fullpath, 'w') as file:
         file.writelines(lines)
-    print("Task deleted successfully")
-
+    print("Task deleted successfully!")
+    return
 
 def mark_task_done():
     view_all_tasks()
-    task_number = int(input("Enter the task number to mark as done: "))
+    task = int(input("Enter the task number to be mark as done: "))
     with open(fullpath, 'r') as file:
         lines = file.readlines()
-    if task_number < 1 or task_number >= len(lines):
-        print("Index is invalid. Please give a valid index")
+    if task < 1 or task >= len(lines):
+        print("Index chosen out of range")
         return
-    lines[task_number] = lines[task_number].strip() + " (Done)\n"
+    lines[task] = lines[task].strip() + " (Done)\n"
     with open(fullpath, 'w') as file:
         file.writelines(lines)
-    print("Task marked as done")
+    print("Task marked as done!")
+    return
 
 def display_menu():
     print("Menu:")

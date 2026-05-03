@@ -1,2 +1,3 @@
 My Task List
-Buy eggs
+Buy rice [MEDIUM] (Done)
+Buy milk [LOW]

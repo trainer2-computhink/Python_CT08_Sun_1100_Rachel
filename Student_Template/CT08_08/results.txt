@@ -1,0 +1,13 @@
+Sherlock Holmes Text Analysis
+------------------------------
+Total Characters: 52968
+Total Vowels: 15705
+
+Vowel Frequency:
+a = 3401
+e = 4835
+i = 2932
+o = 3227
+u = 1310
+
+Percentage of Vowels in Text: 29.65%
